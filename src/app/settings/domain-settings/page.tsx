@@ -159,7 +159,7 @@ const DomainSettings: React.FC = () => {
                 <div className="h-56 w-full bg-gray-100 dark:bg-gray-700 rounded-md shadow-md mb-4 md:ml-28">
                   {/* Image preview or placeholder */}
                 </div>
-                <div className="flex justify-center space-x-4 md:ml-32">
+                <div className="flex justify-center space-x-4 md:ml-56">
                   <button onClick={handleSave} className="px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md transition">
                     Save
                   </button>

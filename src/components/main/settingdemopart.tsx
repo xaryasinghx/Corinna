@@ -54,7 +54,7 @@ const TabsDemo: React.FC = () => {
             }`}
             onClick={() => handleTabClick("account")}
           >
-            Account
+            Questions
           </button>
           <button
             className={`py-2 px-4 text-center font-semibold ${
@@ -64,7 +64,7 @@ const TabsDemo: React.FC = () => {
             }`}
             onClick={() => handleTabClick("password")}
           >
-            Password
+            Help Desk
           </button>
         </div>
 
@@ -154,7 +154,7 @@ const TabsDemo: React.FC = () => {
       </div>
     </div>
     <div className="flex bg-white z-10">
-      <div className="flex-1 p-6 white mt-6">
+      <div className="flex-1 p-6 white mt-12">
         {/* Workflows Section */}
         <div className="border border-gray-200 rounded-lg p-4 shadow-md">
           <div className="flex justify-between items-center mb-4">

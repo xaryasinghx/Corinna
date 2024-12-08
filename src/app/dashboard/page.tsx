@@ -32,7 +32,7 @@ const Dashboard: React.FC = () => {
     return (
         <TooltipProvider> {/* Wrap the entire component in TooltipProvider */}
         <Sidebar />
-            <div className="flex h-screen">
+            <div className="flex">
                 {/* Sidebar */}
 
                 {/* Main Content */}
