@@ -23,20 +23,20 @@ const Home: React.FC = () => {
   const handleSignupClick = () => {
     toast("Redirecting to Sign Up...", {
       icon: "📝",
-      style: { backgroundColor: "#3b82f6", color: "white" },
+      style: { backgroundColor: "white", color: "black" },
     });
   };
 
   return (
     <div className="flex flex-col h-screen bg-white">
       {/* Header */}
-      <header className="flex justify-between items-center p-5 bg-blue-600 shadow-md">
-        <div className={`text-white text-3xl ${caveat.className}`}>Corinna</div>
+      <header className="flex justify-between items-center p-5 bg-white border-b border-gray-200">
+        <div className={`text-black font-bold text-3xl ${caveat.className}`}>Corin<span className="text-blue-600">na</span></div>
         <div className="flex">
           <Link href="/login">
             <Button
               onClick={handleLoginClick}
-              className={`mr-4 bg-white text-2xl text-blue-700 px-6 py-2 rounded-full ${caveat.className} hover:bg-blue-800 shadow-md`}
+              className={`mr-4 bg-blue-600 text-2xl text-white px-6 py-2 rounded-full ${caveat.className} hover:bg-blue-800 shadow-md`}
             >
               Login
             </Button>
@@ -99,7 +99,7 @@ const Home: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-blue-600 text-center p-4 text-white shadow-md">
+      <footer className="bg-white text-center p-4 text-black shadow-md">
         <p>&copy; 2024 Corinna. All rights reserved.</p>
       </footer>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Caveat } from "next/font/google";
+import Navbar from '@/components/main/navbar';
 
 const caveat = Caveat({
   subsets: ["latin"],
@@ -9,7 +10,8 @@ const caveat = Caveat({
 const PricingSection: React.FC = () => {
   return (
     <section className="bg-white">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <Navbar/>
+      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 transform scale-95">
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2 className={`mb-4 text-5xl tracking-tight text-blue-600 font-extrabold ${caveat.className}`}>
             Corinna

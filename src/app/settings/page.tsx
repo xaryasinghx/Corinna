@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Settings2 } from "lucide-react";
 import Link from "next/link";
 import { Caveat } from "next/font/google";
 
@@ -59,24 +59,21 @@ const Settings: React.FC = () => {
   };
 
   return (
-    <div className="p-8 space-y-6 max-w-3xl mx-auto">
+    <div className="p-8 pt-20 space-y-6 max-w-3xl mx-auto">
       {/* Dark Mode Toggle */}
-      <Card className="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-xl">
+      <Card className="flex justify-between p-6 bg-white dark:bg-neutral-800 shadow-lg rounded-xl">
         <h2 className={`text-3xl font-bold text-gray-900 dark:text-white ${caveat.className}`}>
           Theme Settings
         </h2>
-        <div className="flex items-center justify-between mt-4">
+        <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <span className="text-lg font-medium text-gray-700 dark:text-gray-300">
-              Dark Mode
-            </span>
-            <Switch
-              checked={darkMode}
-              onCheckedChange={handleToggleDarkMode}
-              className="cursor-pointer"
-            />
-          </div>
-          <div className="flex items-center space-x-2">
+          <Link href="/settings/domain-settings">
+            <Button
+              className={`text-xl bg-blue-600 text-white hover:bg-blue-700 rounded-md py-2 transition duration-300 ${caveat.className}`}
+            > 
+              Domain Settings <Settings2/>
+            </Button>
+          </Link>
             <Button
               variant="link"
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300"
@@ -93,7 +90,7 @@ const Settings: React.FC = () => {
       </Card>
 
       {/* Password Change Form */}
-      <Card className="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-xl">
+      <Card className="p-6 bg-white dark:bg-neutral-800 shadow-lg rounded-xl">
         <h2 className={`text-3xl font-bold text-gray-900 dark:text-white ${caveat.className}`}>
           Change Password
         </h2>
@@ -157,19 +154,6 @@ const Settings: React.FC = () => {
           >
             Change Password
           </Button>
-        </div>
-      </Card>
-
-      {/* Domain Settings Button */}
-      <Card className="p-6 bg-white dark:bg-gray-800 shadow-lg rounded-xl">
-        <div className="space-y-4">
-          <Link href="/domain-settings">
-            <Button
-              className={`w-full mt-4 text-xl bg-green-500 text-white hover:bg-green-600 rounded-md py-2 transition duration-300 ${caveat.className}`}
-            >
-              Go to Domain Settings
-            </Button>
-          </Link>
         </div>
       </Card>
     </div>

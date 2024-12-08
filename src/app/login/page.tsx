@@ -131,7 +131,7 @@ const Login: React.FC = () => {
             </div>
 
             {/* Right Section for Image */}
-            <div className="flex-1 relative overflow-hidden ml-10">
+            <div className="flex-1 relative overflow-hidden ml-10 hidden md:block">
                 <Image
                     src="/6183516_3129482.svg" // Replace with your image path
                     alt="Illustrative Image"
